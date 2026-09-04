@@ -1,0 +1,27 @@
+name: bao-mat
+on:
+  push:
+  pull_request:
+  schedule:
+    - cron: "0 1 * * 1"      # 08:00 thứ Hai giờ Việt Nam — CVE mới xuất hiện liên tục
+
+jobs:
+  quet:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v5
+        with: { enable-cache: true }
+      - run: uv sync --frozen
+      - name: Test an toàn (48 test, không gọi model)
+        run: uv run pytest tests/test_an_toan.py -q
+      - name: Quét tự động
+        run: uv run --with pip-audit --with bandit python scripts/scan_bao_mat.py
+      - name: Lưu báo cáo
+        if: always()
+        run: uv run --with pip-audit --with bandit python scripts/scan_bao_mat.py --json > bao-mat.json
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: bao-cao-bao-mat
+          path: bao-mat.json
