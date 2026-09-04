@@ -1,9 +1,9 @@
 name: bao-mat
 on:
   push:
+    branches: [ main, master ]
   pull_request:
-  schedule:
-    - cron: "0 1 * * 1"      # 08:00 thứ Hai giờ Việt Nam — CVE mới xuất hiện liên tục
+    branches: [ main, master ]
 
 jobs:
   quet:
