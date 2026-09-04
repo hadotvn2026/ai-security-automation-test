@@ -1,0 +1,50 @@
+[project]
+name = "rag-qa-training"
+version = "0.1.0"
+description = "Training: pytest + DeepEval + RAGAS cho ung dung AI chay bang model local (Ollama)"
+readme = "README.md"
+requires-python = ">=3.13,<3.14"
+
+# ---------------------------------------------------------------------------
+# TAT CA VERSION DEU PIN CUNG (==). Xem docs/00-tong-quan.md, muc "API drift".
+# RAGAS 0.4 va DeepEval 4.x da doi API rat nhieu so voi cac ban 0.1/0.2 ma
+# hau het blog/tutorial tren mang dang dung. Doi version = code trong khoa hoc
+# nay se gay.
+# ---------------------------------------------------------------------------
+dependencies = [
+    "langgraph==1.2.11",
+    "langchain-core==1.6.1",
+    "langchain-ollama==1.1.0",
+    "chromadb==1.5.9",
+    "ollama==0.6.2",
+    "python-docx==1.2.0",
+    "fastapi==0.141.1",
+    "uvicorn==0.52.4",
+]
+
+[dependency-groups]
+dev = [
+    "pytest==9.1.1",
+    "pytest-cov==7.1.0",
+    "httpx==0.28.1",
+    "deepeval==4.2.0",
+    "ragas==0.4.3",
+    "langchain-community==0.3.31",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/rag_qa"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+addopts = "-ra --strict-markers"
+markers = [
+    "unit: test nhanh, khong goi model that (Part 1 + Part 3 plumbing)",
+    "eval: test danh gia chat luong LLM, co goi judge model that (Part 3 + Part 4)",
+    "slow: test mat > 10 giay",
+]

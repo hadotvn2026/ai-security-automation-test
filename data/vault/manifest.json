@@ -1,0 +1,55 @@
+{
+  "_ghi_chu": "VAULT GIẢ LẬP - kho văn bản pháp luật nội bộ của doanh nghiệp. Dữ liệu bịa để mô phỏng tình huống tài liệu có phiên bản mới. KHÔNG phải dữ liệu pháp lý thật.",
+  "cap_nhat_luc": "2026-08-25T09:00:00+07:00",
+  "tai_lieu": [
+    {
+      "ma": "LUAT-116-2025",
+      "ten": "Luật An ninh mạng",
+      "so_hieu": "116/2025/QH15",
+      "phien_ban": "1.0",
+      "ngay_ban_hanh": "2025-12-10",
+      "ngay_hieu_luc": "2026-07-01",
+      "trang_thai": "sap_hieu_luc",
+      "dang_dung_trong_rag": true,
+      "ghi_chu": "Bản đang được nạp vào vector store của ứng dụng."
+    },
+    {
+      "ma": "DUTHAO-ND-ANM-2026",
+      "ten": "Dự thảo Nghị định quy định chi tiết một số điều của Luật An ninh mạng",
+      "so_hieu": "(chưa có số)",
+      "phien_ban": "0.3",
+      "ngay_ban_hanh": "2026-08-14",
+      "ngay_hieu_luc": null,
+      "trang_thai": "du_thao",
+      "dang_dung_trong_rag": false,
+      "lien_quan_den": "LUAT-116-2025",
+      "ghi_chu": "Dự thảo đang lấy ý kiến. Quy định chi tiết tiêu chí xác định cấp độ hệ thống thông tin (Điều 8) và trình tự kiểm tra an ninh mạng (Điều 12)."
+    },
+    {
+      "ma": "LUAT-24-2018",
+      "ten": "Luật An ninh mạng",
+      "so_hieu": "24/2018/QH14",
+      "phien_ban": "1.0",
+      "ngay_ban_hanh": "2018-06-12",
+      "ngay_hieu_luc": "2019-01-01",
+      "ngay_het_hieu_luc": "2026-07-01",
+      "trang_thai": "sap_het_hieu_luc",
+      "dang_dung_trong_rag": false,
+      "bi_thay_the_boi": "LUAT-116-2025",
+      "ghi_chu": "Hết hiệu lực khi Luật 116/2025 có hiệu lực."
+    },
+    {
+      "ma": "LUAT-86-2015",
+      "ten": "Luật An toàn thông tin mạng",
+      "so_hieu": "86/2015/QH13",
+      "phien_ban": "1.1",
+      "ngay_ban_hanh": "2015-11-19",
+      "ngay_hieu_luc": "2016-07-01",
+      "ngay_het_hieu_luc": "2026-07-01",
+      "trang_thai": "sap_het_hieu_luc",
+      "dang_dung_trong_rag": false,
+      "bi_thay_the_boi": "LUAT-116-2025",
+      "ghi_chu": "Đã sửa đổi bổ sung theo Luật số 35/2018/QH14."
+    }
+  ]
+}

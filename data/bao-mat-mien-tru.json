@@ -1,0 +1,46 @@
+{
+  "_ghi_chu": "Miễn trừ lỗ hổng ĐÃ ĐƯỢC ĐÁNH GIÁ. Không phải danh sách bỏ qua. Mỗi mục phải có: đánh giá phơi nhiễm, biện pháp bù, ngày hết hạn, người duyệt. Hết hạn thì bộ quét tự bật lại thành mức CAO.",
+  "_canh_bao": "Ba lỗ hổng dưới đây ĐỀU CHƯA CÓ BẢN VÁ tại thời điểm duyệt — repo đã ở phiên bản mới nhất. Nâng cấp không phải lựa chọn.",
+  "mien_tru": [
+    {
+      "ma": ["PYSEC-2026-311", "CVE-2026-45830", "CVE-2026-45831", "CVE-2026-45833"],
+      "goi": "chromadb",
+      "phien_ban": "1.5.9",
+      "danh_gia_phoi_nhiem": "Cả bốn lỗ hổng nhắm vào ChromaDB chạy ở chế độ MÁY CHỦ (pre-auth code injection, bỏ qua kiểm tra quyền, lỗi RBAC). Ứng dụng này dùng chromadb.PersistentClient — nhúng trong tiến trình, đọc ghi thẳng xuống đĩa, KHÔNG mở cổng mạng nào. Không có bề mặt tấn công tương ứng.",
+      "bien_phap_bu": [
+        "Không bao giờ chạy `chroma run` hay dùng chromadb.HttpClient trong dự án này.",
+        "Bộ quét có kiểm tra tự động: phát hiện HttpClient trong mã nguồn là HUỶ miễn trừ này.",
+        "data/chroma/ chỉ đọc ghi bởi tiến trình ứng dụng, không chia sẻ qua mạng."
+      ],
+      "dieu_kien_huy": "Xuất hiện chromadb.HttpClient hoặc cấu hình chạy Chroma server",
+      "het_han": "2026-12-01",
+      "nguoi_duyet": "(điền tên người duyệt trước khi dùng thật)"
+    },
+    {
+      "ma": ["PYSEC-2026-2447"],
+      "goi": "diskcache",
+      "phien_ban": "5.6.3",
+      "danh_gia_phoi_nhiem": "diskcache dùng pickle để tuần tự hoá; kẻ tấn công CÓ QUYỀN GHI vào thư mục cache mới thực thi được mã. Đây là phụ thuộc gián tiếp (qua chromadb), cache nằm trong thư mục dự án trên máy cá nhân của học viên. Kẻ tấn công đã có quyền ghi vào thư mục dự án thì đã có nhiều đường tấn công dễ hơn.",
+      "bien_phap_bu": [
+        "Không đặt thư mục cache ở vị trí ghi được bởi người dùng khác (/tmp dùng chung).",
+        "Trên môi trường thật: chạy ứng dụng bằng tài khoản riêng, thư mục cache 0700."
+      ],
+      "dieu_kien_huy": "Triển khai đa người dùng trên cùng một máy",
+      "het_han": "2026-12-01",
+      "nguoi_duyet": "(điền tên người duyệt trước khi dùng thật)"
+    },
+    {
+      "ma": ["PYSEC-2026-3046"],
+      "goi": "ragas",
+      "phien_ban": "0.4.3",
+      "danh_gia_phoi_nhiem": "Lỗi nằm ở _try_process_local_file/_try_process_url. ragas là phụ thuộc NHÓM DEV (xem [dependency-groups] trong pyproject.toml) — nó không được cài trong môi trường chạy ứng dụng, chỉ có mặt khi chạy bộ test đánh giá. Đường dẫn và URL đưa vào ragas đều do người phát triển kiểm soát, không đến từ người dùng cuối.",
+      "bien_phap_bu": [
+        "Cài bằng `uv sync --no-dev` trên môi trường chạy thật.",
+        "Không truyền đường dẫn/URL do người dùng cung cấp vào bất kỳ API nào của ragas."
+      ],
+      "dieu_kien_huy": "ragas chuyển sang nhóm dependencies chính, hoặc nhận đầu vào từ người dùng",
+      "het_han": "2026-12-01",
+      "nguoi_duyet": "(điền tên người duyệt trước khi dùng thật)"
+    }
+  ]
+}

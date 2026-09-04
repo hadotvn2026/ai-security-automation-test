@@ -1,0 +1,39 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+*.egg-info/
+
+# pytest
+.pytest_cache/
+.coverage
+htmlcov/
+
+# DeepEval
+.deepeval*
+temp_test_run_data.json
+
+# Báo cáo sinh ra khi chạy
+reports/
+
+# Sentinel công tắc dừng khẩn — trạng thái vận hành, không phải mã nguồn
+.agent-kill
+
+# Ảnh trung gian của bước OCR (chỉ cần khi soạn lại corpus)
+data/.ocr-tmp/
+
+# LƯU Ý: các thư mục sau CỐ Ý được commit vào repo
+#   data/chroma/              -> để học viên không phải chờ embedding
+#   data/*.pdf, *.docx, *.txt -> corpus nguồn và bản đã OCR
+#   tests/fixtures/responses/ -> để bộ test chạy offline và tất định
+.claude
+.agents
+.venv
+.venv-1
+/data/.orc-tmp
+docs/
+snapshots/
+reports/
+scripts
+skills-lock.json
+demo-langraph/

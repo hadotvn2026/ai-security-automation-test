@@ -1,0 +1,291 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Trợ lý pháp lý — An ninh mạng</title>
+<style>
+  :root {
+    --nen: #fbfaf8; --the: #ffffff; --vien: #e3e0da; --chu: #1c1b19;
+    --mo: #6b675f; --nhan: #1d4ed8; --nhan-nhat: #eef2ff;
+    --canh-bao: #b45309; --canh-bao-nen: #fffbeb; --ok: #15803d;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --nen: #171614; --the: #201f1c; --vien: #35332e; --chu: #ecebe7;
+      --mo: #9d988e; --nhan: #93b4ff; --nhan-nhat: #1e2436;
+      --canh-bao: #fbbf24; --canh-bao-nen: #2a2110; --ok: #6ee7a8;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--nen); color: var(--chu);
+    font: 15px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  }
+  header {
+    border-bottom: 1px solid var(--vien); padding: 14px 20px;
+    display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap;
+  }
+  header h1 { font-size: 16px; margin: 0; font-weight: 650; }
+  header .phu { color: var(--mo); font-size: 13px; }
+  .canh-bao-goc {
+    background: var(--canh-bao-nen); color: var(--canh-bao);
+    border-bottom: 1px solid var(--vien); padding: 8px 20px; font-size: 13px;
+  }
+  main { display: grid; grid-template-columns: 1fr 320px; gap: 20px; padding: 20px; max-width: 1200px; margin: 0 auto; }
+  @media (max-width: 860px) { main { grid-template-columns: 1fr; } }
+  .the { background: var(--the); border: 1px solid var(--vien); border-radius: 10px; padding: 16px; }
+  .the + .the { margin-top: 16px; }
+  .the h2 { font-size: 13px; text-transform: uppercase; letter-spacing: .04em; color: var(--mo); margin: 0 0 10px; }
+  #hoi-thoai { min-height: 160px; }
+  .luot { margin-bottom: 18px; }
+  .luot .ai-hoi { font-weight: 600; margin-bottom: 6px; }
+  .luot .tra-loi { white-space: pre-wrap; }
+  .quy-dao { display: flex; gap: 6px; flex-wrap: wrap; margin: 8px 0; }
+  .buoc {
+    background: var(--nhan-nhat); color: var(--nhan); border-radius: 999px;
+    padding: 2px 10px; font-size: 12px; font-family: ui-monospace, SFMono-Regular, monospace;
+  }
+  .buoc.rong { background: transparent; color: var(--mo); border: 1px dashed var(--vien); }
+  .meta { color: var(--mo); font-size: 12px; margin-top: 6px; }
+  .canh-bao-tri-nho {
+    background: var(--canh-bao-nen); color: var(--canh-bao);
+    border: 1px solid currentColor; border-radius: 6px;
+    padding: 8px 10px; margin: 8px 0; font-size: 13px;
+  }
+  details { margin-top: 8px; }
+  details summary { cursor: pointer; color: var(--mo); font-size: 13px; }
+  details pre {
+    white-space: pre-wrap; background: var(--nen); border: 1px solid var(--vien);
+    border-radius: 6px; padding: 10px; font-size: 12px; max-height: 260px; overflow: auto;
+  }
+  form { display: flex; gap: 8px; margin-top: 12px; }
+  input[type=text] {
+    flex: 1; padding: 10px 12px; border: 1px solid var(--vien); border-radius: 8px;
+    background: var(--the); color: var(--chu); font: inherit;
+  }
+  button {
+    padding: 10px 16px; border: 1px solid var(--nhan); background: var(--nhan);
+    color: #fff; border-radius: 8px; font: inherit; cursor: pointer;
+  }
+  button[disabled] { opacity: .5; cursor: progress; }
+  .che-do { display: flex; gap: 14px; margin-top: 10px; font-size: 13px; color: var(--mo); }
+  .tai-lieu { font-size: 13px; border-top: 1px solid var(--vien); padding: 8px 0; }
+  .tai-lieu:first-of-type { border-top: 0; }
+  .tai-lieu .ten { font-weight: 600; }
+  .nhan {
+    display: inline-block; font-size: 11px; padding: 1px 7px; border-radius: 999px;
+    border: 1px solid var(--vien); color: var(--mo);
+  }
+  .nhan.dang-dung { color: var(--ok); border-color: currentColor; }
+  .nhan.du-thao { color: var(--canh-bao); border-color: currentColor; }
+  .goi-y button {
+    background: transparent; color: var(--nhan); border: 1px solid var(--vien);
+    font-size: 13px; padding: 6px 10px; margin: 4px 4px 0 0;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Trợ lý pháp lý — An ninh mạng</h1>
+  <span class="phu" id="suc-khoe">đang kiểm tra hệ thống…</span>
+</header>
+
+<div class="canh-bao-goc">
+  ⚠️ Nội dung sinh từ tài liệu <strong>OCR</strong> và mô hình chạy local.
+  Dùng cho <strong>đào tạo kỹ thuật</strong> — không dùng để tra cứu hoặc trích dẫn pháp lý.
+</div>
+
+<main>
+  <section>
+    <div class="the">
+      <h2>Hội thoại</h2>
+      <div id="hoi-thoai"><p class="meta">Đặt một câu hỏi để bắt đầu.</p></div>
+
+      <form id="form">
+        <input type="text" id="o-nhap" placeholder="Ví dụ: Luật có hiệu lực từ ngày nào?" autocomplete="off">
+        <button type="submit" id="nut">Hỏi</button>
+      </form>
+
+      <div class="che-do">
+        <label><input type="radio" name="che-do" value="agent" checked> Agent (có công cụ)</label>
+        <label><input type="radio" name="che-do" value="rag"> RAG thẳng (không công cụ)</label>
+      </div>
+
+      <div class="goi-y" id="goi-y"></div>
+    </div>
+  </section>
+
+  <aside>
+    <div class="the">
+      <h2>Kho tài liệu (vault)</h2>
+      <div id="vault">đang tải…</div>
+    </div>
+    <div class="the">
+      <h2>Trí nhớ tự sửa</h2>
+      <div id="tri-nho">đang tải…</div>
+    </div>
+    <div class="the">
+      <h2>Bốn công cụ của agent</h2>
+      <div class="quy-dao">
+        <span class="buoc">tra_cuu_van_ban</span>
+        <span class="buoc">kiem_tra_cap_nhat</span>
+        <span class="buoc">tinh_thoi_han</span>
+        <span class="buoc">chuyen_chuyen_gia</span>
+      </div>
+      <p class="meta">Agent tự chọn công cụ. Quỹ đạo thật hiện dưới mỗi câu trả lời.</p>
+    </div>
+  </aside>
+</main>
+
+<script>
+const GOI_Y = [
+  "Luật An ninh mạng 116/2025 có hiệu lực từ ngày nào?",
+  "Tài liệu đang dùng có bản cập nhật nào không?",
+  "Hệ thống thông tin được phân loại thành mấy cấp độ?",
+  "Doanh nghiệp vi phạm bị phạt bao nhiêu tiền?",
+];
+
+const el = (id) => document.getElementById(id);
+
+function thoat(s) {
+  return String(s).replace(/[&<>"']/g, (c) =>
+    ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+}
+
+async function nap(url, opts) {
+  const r = await fetch(url, opts);
+  if (!r.ok) throw new Error(`${r.status} ${r.statusText}`);
+  return r.json();
+}
+
+async function tai_suc_khoe() {
+  try {
+    const d = await nap("/api/suc-khoe");
+    el("suc-khoe").textContent =
+      `model ${d.model_ung_dung} · ${d.so_chunk} chunk · top_k=${d.top_k}`;
+  } catch (e) {
+    el("suc-khoe").textContent = "không kết nối được backend";
+  }
+}
+
+async function tai_tri_nho() {
+  try {
+    const d = await nap("/api/tri-nho");
+    const can = d.lac_hau.length;
+    el("tri-nho").innerHTML = can
+      ? `<div class="meta">${d.tong} khẳng định, <strong>${can} cần xác thực lại</strong></div>` +
+        d.lac_hau.map((k) =>
+          `<div class="tai-lieu"><div class="ten">Điều ${k.dieu}</div>
+           <div class="meta">${thoat(k.ly_do)}</div></div>`).join("")
+      : `<div class="meta">${d.tong} khẳng định, bằng chứng còn nguyên vẹn</div>`;
+  } catch (e) {
+    el("tri-nho").textContent = "không tải được";
+  }
+}
+
+async function tai_vault() {
+  try {
+    const ds = await nap("/api/tai-lieu");
+    el("vault").innerHTML = ds.map((t) => {
+      const nhan = t.dang_dung_trong_rag
+        ? '<span class="nhan dang-dung">đang dùng</span>'
+        : t.trang_thai === "du_thao"
+          ? '<span class="nhan du-thao">dự thảo</span>'
+          : `<span class="nhan">${thoat(t.trang_thai)}</span>`;
+      return `<div class="tai-lieu">
+        <div class="ten">${thoat(t.ten)}</div>
+        <div class="meta">${thoat(t.so_hieu)} · ${thoat(t.ngay_ban_hanh)} ${nhan}</div>
+      </div>`;
+    }).join("");
+  } catch (e) {
+    el("vault").textContent = "không tải được vault";
+  }
+}
+
+function ve_goi_y() {
+  el("goi-y").innerHTML = GOI_Y
+    .map((q) => `<button type="button" data-q="${thoat(q)}">${thoat(q)}</button>`)
+    .join("");
+  el("goi-y").querySelectorAll("button").forEach((b) =>
+    b.addEventListener("click", () => {
+      el("o-nhap").value = b.dataset.q;
+      el("form").requestSubmit();
+    }));
+}
+
+function ve_luot(cau_hoi, d) {
+  const quy_dao = d.quy_dao.length
+    ? d.quy_dao.map((t) => `<span class="buoc">${thoat(t)}</span>`).join("")
+    : '<span class="buoc rong">không gọi công cụ nào</span>';
+
+  const buoc = d.buoc.length
+    ? `<details><summary>Chi tiết ${d.buoc.length} lần gọi công cụ</summary><pre>${
+        thoat(d.buoc.map((b) =>
+          `▸ ${b.tool}(${JSON.stringify(b.args)})\n${b.ket_qua}`).join("\n\n"))
+      }</pre></details>`
+    : "";
+
+  const ngu_canh = d.ngu_canh.length
+    ? `<details><summary>${d.ngu_canh.length} đoạn tài liệu đã dùng</summary><pre>${
+        thoat(d.ngu_canh.join("\n\n---\n\n"))}</pre></details>`
+    : "";
+
+  const canh_bao = (d.canh_bao || []).length
+    ? `<div class="canh-bao-tri-nho">${
+        d.canh_bao.map((c) => thoat(c)).join("<br>")}</div>`
+    : "";
+
+  const div = document.createElement("div");
+  div.className = "luot";
+  div.innerHTML = `
+    <div class="ai-hoi">${thoat(cau_hoi)}</div>
+    <div class="quy-dao">${quy_dao}</div>
+    ${canh_bao}
+    <div class="tra-loi">${thoat(d.cau_tra_loi)}</div>
+    <div class="meta">chế độ ${thoat(d.che_do)} · ${d.so_buoc} bước · ${d.thoi_gian_ms} ms</div>
+    ${buoc}${ngu_canh}`;
+  return div;
+}
+
+el("form").addEventListener("submit", async (ev) => {
+  ev.preventDefault();
+  const cau_hoi = el("o-nhap").value.trim();
+  if (!cau_hoi) return;
+
+  const che_do = document.querySelector('input[name="che-do"]:checked').value;
+  const hoi_thoai = el("hoi-thoai");
+  if (hoi_thoai.querySelector("p.meta")) hoi_thoai.innerHTML = "";
+
+  el("nut").disabled = true;
+  el("nut").textContent = "Đang nghĩ…";
+  const cho = document.createElement("div");
+  cho.className = "luot";
+  cho.innerHTML = `<div class="ai-hoi">${thoat(cau_hoi)}</div>
+                   <div class="meta">agent đang chọn công cụ…</div>`;
+  hoi_thoai.appendChild(cho);
+
+  try {
+    const d = await nap("/api/hoi", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ noi_dung: cau_hoi, che_do }),
+    });
+    cho.replaceWith(ve_luot(cau_hoi, d));
+    el("o-nhap").value = "";
+  } catch (e) {
+    cho.querySelector(".meta").textContent = `Lỗi: ${e.message}`;
+  } finally {
+    el("nut").disabled = false;
+    el("nut").textContent = "Hỏi";
+  }
+});
+
+tai_suc_khoe();
+tai_vault();
+tai_tri_nho();
+ve_goi_y();
+</script>
+</body>
+</html>

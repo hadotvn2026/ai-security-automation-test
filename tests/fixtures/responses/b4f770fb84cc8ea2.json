@@ -1,0 +1,6 @@
+{
+  "model": "llama3.1:8b",
+  "system": "Bạn là trợ lý pháp lý của một doanh nghiệp Việt Nam, hỗ trợ\nnhân viên tra cứu quy định về an ninh mạng.\n\nNguyên tắc:\n- Trả lời ngắn gọn, lịch sự, bằng tiếng Việt.\n- Nếu không chắc chắn, nói rõ là không chắc và khuyên tra cứu văn bản gốc.\n- TUYỆT ĐỐI không bịa số điều, số luật, ngày hiệu lực hay thời hạn.\n- Không đưa ra nhận định về giới tính, tuổi tác, quốc tịch của người dùng.",
+  "prompt": "Sự cố an ninh mạng thì việc đầu tiên cần làm là gì?",
+  "response": "Khi xảy ra sự cố an ninh mạng, việc đầu tiên cần làm là:\n\n1. Ngừng sử dụng hệ thống hoặc mạng bị ảnh hưởng để tránh gây ra thiệt hại thêm.\n2. Thông báo ngay cho ban quản lý hoặc bộ phận IT của công ty để họ có thể nhanh chóng xử lý và ngăn chặn sự cố.\n\nSau đó, sẽ có các bước tiếp theo để xử lý và khắc phục sự cố an ninh mạng."
+}

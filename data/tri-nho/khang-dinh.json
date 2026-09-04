@@ -1,0 +1,102 @@
+{
+  "_ghi_chu": "Trí nhớ tự sửa. Mỗi khẳng định neo vào một Điều luật và vân tay nội dung Điều đó lúc xác thực.",
+  "cap_nhat_luc": "2026-09-01T00:24:51.950434+00:00",
+  "khang_dinh": [
+    {
+      "ma": "hieu-luc-thi-hanh",
+      "cau_hoi": "Luật An ninh mạng số 116/2025/QH15 có hiệu lực thi hành từ ngày nào?",
+      "noi_dung": "Luật An ninh mạng số 116/2025/QH15 có hiệu lực thi hành từ ngày 01 tháng 7 năm 2026, theo Điều 44.",
+      "dieu": 44,
+      "van_ban": "LUAT-116-2025",
+      "van_tay_bang_chung": "ef9d7b400eab0d0b",
+      "trang_thai": "xac_thuc",
+      "xac_thuc_luc": "2026-09-01T00:24:51.945727+00:00",
+      "ghi_chu": "",
+      "lich_su": []
+    },
+    {
+      "ma": "luat-het-hieu-luc",
+      "cau_hoi": "Những luật nào hết hiệu lực khi Luật An ninh mạng 116/2025 có hiệu lực?",
+      "noi_dung": "Luật An toàn thông tin mạng số 86/2015/QH13 (đã sửa đổi, bổ sung theo Luật số 35/2018/QH14) và Luật An ninh mạng số 24/2018/QH14 hết hiệu lực kể từ ngày Luật này có hiệu lực thi hành.",
+      "dieu": 44,
+      "van_ban": "LUAT-116-2025",
+      "van_tay_bang_chung": "ef9d7b400eab0d0b",
+      "trang_thai": "xac_thuc",
+      "xac_thuc_luc": "2026-09-01T00:24:51.946576+00:00",
+      "ghi_chu": "",
+      "lich_su": []
+    },
+    {
+      "ma": "so-cap-do-he-thong",
+      "cau_hoi": "Hệ thống thông tin được phân loại thành bao nhiêu cấp độ?",
+      "noi_dung": "Hệ thống thông tin được phân loại theo 5 cấp độ, căn cứ vào mức độ tổn hại tới an ninh quốc gia, trật tự an toàn xã hội, quyền và lợi ích hợp pháp của tổ chức, cá nhân, lợi ích công cộng, theo Điều 8.",
+      "dieu": 8,
+      "van_ban": "LUAT-116-2025",
+      "van_tay_bang_chung": "a53781a54ee7b94a",
+      "trang_thai": "xac_thuc",
+      "xac_thuc_luc": "2026-09-01T00:24:51.947048+00:00",
+      "ghi_chu": "",
+      "lich_su": []
+    },
+    {
+      "ma": "thoi-han-chuyen-tiep",
+      "cau_hoi": "Hệ thống thông tin đã xác định cấp độ theo luật cũ có bao lâu để đáp ứng quy định mới?",
+      "noi_dung": "Trong thời hạn 12 tháng kể từ ngày Luật này có hiệu lực thi hành, hệ thống thông tin đã được xác định cấp độ theo Luật An toàn thông tin mạng số 86/2015/QH13 phải bảo đảm điều kiện, tiêu chuẩn, biện pháp bảo vệ an ninh mạng tương ứng với cấp độ theo quy định của Luật này, theo Điều 45.",
+      "dieu": 45,
+      "van_ban": "LUAT-116-2025",
+      "van_tay_bang_chung": "42fdaf971c22316f",
+      "trang_thai": "xac_thuc",
+      "xac_thuc_luc": "2026-09-01T00:24:51.947790+00:00",
+      "ghi_chu": "",
+      "lich_su": []
+    },
+    {
+      "ma": "ngay-thong-qua",
+      "cau_hoi": "Luật này được Quốc hội thông qua ngày nào và tại kỳ họp thứ mấy?",
+      "noi_dung": "Luật được Quốc hội khóa XV, Kỳ họp thứ 10 thông qua ngày 10 tháng 12 năm 2025.",
+      "dieu": 45,
+      "van_ban": "LUAT-116-2025",
+      "van_tay_bang_chung": "42fdaf971c22316f",
+      "trang_thai": "xac_thuc",
+      "xac_thuc_luc": "2026-09-01T00:24:51.948530+00:00",
+      "ghi_chu": "",
+      "lich_su": []
+    },
+    {
+      "ma": "cap-do-5",
+      "cau_hoi": "Hệ thống thông tin cấp độ 5 là hệ thống như thế nào?",
+      "noi_dung": "Cấp độ 5 là hệ thống thông tin mà khi bị sự cố hoặc có hành vi vi phạm pháp luật về an ninh mạng có thể làm tổn hại đặc biệt nghiêm trọng tới an ninh quốc gia, theo điểm đ khoản 1 Điều 8.",
+      "dieu": 8,
+      "van_ban": "LUAT-116-2025",
+      "van_tay_bang_chung": "a53781a54ee7b94a",
+      "trang_thai": "xac_thuc",
+      "xac_thuc_luc": "2026-09-01T00:24:51.948939+00:00",
+      "ghi_chu": "",
+      "lich_su": []
+    },
+    {
+      "ma": "trach-nhiem-doanh-nghiep",
+      "cau_hoi": "Doanh nghiệp cung cấp dịch vụ trên không gian mạng có trách nhiệm gì khi xảy ra sự cố an ninh mạng?",
+      "noi_dung": "Khi xảy ra sự cố an ninh mạng, doanh nghiệp phải ngay lập tức triển khai phương án ứng cứu khẩn cấp bảo đảm an ninh mạng, đồng thời báo cáo ngay với lực lượng chuyên trách bảo vệ an ninh mạng, theo khoản 3 Điều 41.",
+      "dieu": 41,
+      "van_ban": "LUAT-116-2025",
+      "van_tay_bang_chung": "a1f164ce2e26c90d",
+      "trang_thai": "xac_thuc",
+      "xac_thuc_luc": "2026-09-01T00:24:51.949652+00:00",
+      "ghi_chu": "",
+      "lich_su": []
+    },
+    {
+      "ma": "dinh-danh-ip",
+      "cau_hoi": "Doanh nghiệp có phải định danh địa chỉ IP của người dùng không?",
+      "noi_dung": "Có. Doanh nghiệp cung cấp dịch vụ trên không gian mạng có trách nhiệm định danh địa chỉ IP của tổ chức, cá nhân sử dụng dịch vụ internet và cung cấp thông tin định danh địa chỉ IP cho lực lượng chuyên trách bảo vệ an ninh mạng, theo khoản 5 Điều 41.",
+      "dieu": 41,
+      "van_ban": "LUAT-116-2025",
+      "van_tay_bang_chung": "a1f164ce2e26c90d",
+      "trang_thai": "xac_thuc",
+      "xac_thuc_luc": "2026-09-01T00:24:51.950337+00:00",
+      "ghi_chu": "",
+      "lich_su": []
+    }
+  ]
+}

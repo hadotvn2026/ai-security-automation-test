@@ -1,0 +1,80 @@
+{
+  "_ghi_chu": "Bộ câu hỏi vàng cho Luật 116/2025/QH15 (Luật An ninh mạng). Câu trả lời chuẩn do người viết, đối chiếu trực tiếp với văn bản. Nhóm 'bay' là câu hỏi mà LUẬT NÀY không trả lời được - hệ thống phải nói không biết, không được bịa.",
+  "_canh_bao": "Nội dung OCR từ bản scan, có sai sót dấu. Không dùng để tra cứu pháp lý.",
+  "cases": [
+    {
+      "id": "hieu-luc-thi-hanh",
+      "nhom": "su-kien-don",
+      "dieu": 44,
+      "user_input": "Luật An ninh mạng số 116/2025/QH15 có hiệu lực thi hành từ ngày nào?",
+      "reference": "Luật An ninh mạng số 116/2025/QH15 có hiệu lực thi hành từ ngày 01 tháng 7 năm 2026, theo Điều 44."
+    },
+    {
+      "id": "luat-het-hieu-luc",
+      "nhom": "su-kien-don",
+      "dieu": 44,
+      "user_input": "Những luật nào hết hiệu lực khi Luật An ninh mạng 116/2025 có hiệu lực?",
+      "reference": "Luật An toàn thông tin mạng số 86/2015/QH13 (đã sửa đổi, bổ sung theo Luật số 35/2018/QH14) và Luật An ninh mạng số 24/2018/QH14 hết hiệu lực kể từ ngày Luật này có hiệu lực thi hành."
+    },
+    {
+      "id": "so-cap-do-he-thong",
+      "nhom": "su-kien-don",
+      "dieu": 8,
+      "user_input": "Hệ thống thông tin được phân loại thành bao nhiêu cấp độ?",
+      "reference": "Hệ thống thông tin được phân loại theo 5 cấp độ, căn cứ vào mức độ tổn hại tới an ninh quốc gia, trật tự an toàn xã hội, quyền và lợi ích hợp pháp của tổ chức, cá nhân, lợi ích công cộng, theo Điều 8."
+    },
+    {
+      "id": "thoi-han-chuyen-tiep",
+      "nhom": "su-kien-don",
+      "dieu": 45,
+      "user_input": "Hệ thống thông tin đã xác định cấp độ theo luật cũ có bao lâu để đáp ứng quy định mới?",
+      "reference": "Trong thời hạn 12 tháng kể từ ngày Luật này có hiệu lực thi hành, hệ thống thông tin đã được xác định cấp độ theo Luật An toàn thông tin mạng số 86/2015/QH13 phải bảo đảm điều kiện, tiêu chuẩn, biện pháp bảo vệ an ninh mạng tương ứng với cấp độ theo quy định của Luật này, theo Điều 45."
+    },
+    {
+      "id": "ngay-thong-qua",
+      "nhom": "su-kien-don",
+      "dieu": 45,
+      "user_input": "Luật này được Quốc hội thông qua ngày nào và tại kỳ họp thứ mấy?",
+      "reference": "Luật được Quốc hội khóa XV, Kỳ họp thứ 10 thông qua ngày 10 tháng 12 năm 2025."
+    },
+    {
+      "id": "cap-do-5",
+      "nhom": "su-kien-don",
+      "dieu": 8,
+      "user_input": "Hệ thống thông tin cấp độ 5 là hệ thống như thế nào?",
+      "reference": "Cấp độ 5 là hệ thống thông tin mà khi bị sự cố hoặc có hành vi vi phạm pháp luật về an ninh mạng có thể làm tổn hại đặc biệt nghiêm trọng tới an ninh quốc gia, theo điểm đ khoản 1 Điều 8."
+    },
+    {
+      "id": "trach-nhiem-doanh-nghiep",
+      "nhom": "tong-hop",
+      "dieu": 41,
+      "user_input": "Doanh nghiệp cung cấp dịch vụ trên không gian mạng có trách nhiệm gì khi xảy ra sự cố an ninh mạng?",
+      "reference": "Khi xảy ra sự cố an ninh mạng, doanh nghiệp phải ngay lập tức triển khai phương án ứng cứu khẩn cấp bảo đảm an ninh mạng, đồng thời báo cáo ngay với lực lượng chuyên trách bảo vệ an ninh mạng, theo khoản 3 Điều 41."
+    },
+    {
+      "id": "dinh-danh-ip",
+      "nhom": "tong-hop",
+      "dieu": 41,
+      "user_input": "Doanh nghiệp có phải định danh địa chỉ IP của người dùng không?",
+      "reference": "Có. Doanh nghiệp cung cấp dịch vụ trên không gian mạng có trách nhiệm định danh địa chỉ IP của tổ chức, cá nhân sử dụng dịch vụ internet và cung cấp thông tin định danh địa chỉ IP cho lực lượng chuyên trách bảo vệ an ninh mạng, theo khoản 5 Điều 41."
+    },
+    {
+      "id": "bay-muc-phat-tu",
+      "nhom": "bay",
+      "user_input": "Mức phạt tù cao nhất cho hành vi tấn công mạng là bao nhiêu năm?",
+      "reference": "Tài liệu không đề cập đến thông tin này."
+    },
+    {
+      "id": "bay-muc-phat-tien",
+      "nhom": "bay",
+      "user_input": "Doanh nghiệp vi phạm quy định về an ninh mạng bị phạt tiền bao nhiêu?",
+      "reference": "Tài liệu không đề cập đến thông tin này."
+    },
+    {
+      "id": "bay-le-phi",
+      "nhom": "bay",
+      "user_input": "Lệ phí cấp giấy phép kinh doanh dịch vụ an ninh mạng là bao nhiêu?",
+      "reference": "Tài liệu không đề cập đến thông tin này."
+    }
+  ]
+}
